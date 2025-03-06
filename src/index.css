@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background-image: url('/src/icons/background.jpg'); /* Replace with your image path */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+ 
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --glass-bg: rgba(1, 1, 1, 1); /* Black with transparency */
+    --glass-blur: blur(10000px);
+ 
+    --radius: 0.5rem;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Glassmorphic effect */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
