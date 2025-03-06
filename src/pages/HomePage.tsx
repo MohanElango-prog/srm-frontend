@@ -6,6 +6,7 @@ import PartnersSection from "@/components/PartnersSection";
 import PropertyListings from "@/components/ProperList";
 import TestimonialsSection from "@/components/Testimonials";
 import NewsVideosCarousel from "@/components/Videos";
+import RealEstateRoadmap from "@/components/whySrm";
 import { LucideAlignEndVertical } from "lucide-react";
 
 const HomePage = () => {
@@ -17,6 +18,7 @@ const HomePage = () => {
     <OurProcess />
     <PropertyListings />
     <TestimonialsSection />
+    <RealEstateRoadmap  />
     <NewsVideosCarousel />
     </>
   );
