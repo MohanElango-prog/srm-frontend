@@ -89,7 +89,16 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+			},
+			backgroundImage: {
+				"gold-gradient": "linear-gradient(to right, #FFB800 0%, #FFDB7F 50%, #FFB800 100%)",
+			  },
+			textColor: {
+				"gold-gradient": "transparent",
+			  },
+			  fontFamily: {
+				sans: ["Raleway", "Inter", "sans-serif"], 
+			  },
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

@@ -34,34 +34,39 @@ const FAQSection: React.FC = () => {
 
   return (
     <div className="bg-black text-white py-12 px-4 md:px-16">
-      <h1 className="text-4xl md:text-5xl font-bold text-amber-400 mb-8">
+      <h1 className="text-4xl md:text-5xl font-bold bg-gold-gradient bg-clip-text text-transparent mb-8">
         Frequently Asked Questions?
       </h1>
-      
-      <div className="border-t border-gray-700">
-      {faqItems.map((item, index) => (
-  <div key={index} className="border-b border-gray-700">
-    <div 
-      className="py-5 flex items-center cursor-pointer"
-      onClick={() => toggleQuestion(index)}
-    >
-      <h2 className={`text-xl ${index === 1 ? 'text-amber-400' : 'text-gray-300'}`}>
-        {item.question}
-      </h2>
-      
-      <div className="ml-auto text-amber-400 w-[500px] flex justify-end">
-        {expandedIndex === index ? (
-          <div className="bg-gray-900 border border-amber-700/30 rounded p-4 text-gray-300">
-            {item.answer}
-          </div>
-        ) : (
-          <img src={dArrow} alt="Down Arrow" className="w-8 h-8" />
-        )}
-      </div>
-    </div>
-  </div>
-))}
 
+      <div className="border-t border-gray-700">
+        {faqItems.map((item, index) => (
+          <div key={index} className="border-b border-gray-700">
+            <div 
+              className="py-5 cursor-pointer flex items-center"
+              onClick={() => toggleQuestion(index)}
+            >
+              {/* Question with bottom border when selected */}
+              <h2 className={`text-xl pb-2 transition-all duration-300 border-b-2 ${
+                expandedIndex === index 
+                  ? 'bg-gold-gradient bg-clip-text text-transparent border-amber-500' 
+                  : 'text-gray-300 border-transparent'
+              }`}>
+                {item.question}
+              </h2>
+
+              {/* Arrow Icon */}
+              <div className="ml-auto text-amber-400">
+                {expandedIndex === index ? (
+                  <div className="bg-[#F0A500]/20 border border-amber-700/30 rounded p-4 text-gray-300">
+                    {item.answer}
+                  </div>
+                ) : (
+                  <img src={dArrow} alt="Down Arrow" className="w-8 h-8" />
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

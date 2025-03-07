@@ -1,22 +1,23 @@
 import React from 'react';
+import images from "../icons/blog1.jpg";
 
 const BlogLayout = () => {
   const latestPosts = [
     {
       id: 1,
-      image: '/api/placeholder/400/300',
+      image: images,
       title: 'Lorem ipsum dolor sit amet consectetur.',
       date: 'August 10, 2024'
     },
     {
       id: 2,
-      image: '/api/placeholder/400/300',
+      image: images,
       title: 'Maecenas ornare pharetra.',
       date: 'August 9, 2024'
     },
     {
       id: 3,
-      image: '/api/placeholder/400/300',
+      image: images,
       title: 'Consectetur adipiscing elit.',
       date: 'August 8, 2024'
     }
@@ -29,7 +30,7 @@ const BlogLayout = () => {
         <div className="md:col-span-2 relative">
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
           <img 
-            src="/api/placeholder/1200/800" 
+            src= {images} 
             alt="Feature Article" 
             className="w-full h-[600px] object-cover"
           />

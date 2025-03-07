@@ -1,24 +1,24 @@
-import AboutSection from "@/components/About";
+import AboutSection from "@/sections/home/About";
 import Gallery from "@/components/Gallery";
-import RealEstateHero from "@/components/Lander";
+import RealEstateHero from "@/sections/home/Lander";
 import OurProcess from "@/components/ourProcess";
-import PartnersSection from "@/components/PartnersSection";
-import PropertyListings from "@/components/ProperList";
-import TestimonialsSection from "@/components/Testimonials";
-import NewsVideosCarousel from "@/components/Videos";
-import RealEstateRoadmap from "@/components/whySrm";
+import ServicesCarousel from "@/sections/home/ourServies";
+import PartnersSection from "@/sections/home/PartnersSection";
+import PropertyListings from "@/sections/home/ProperList";
+import TestimonialsSection from "@/sections/home/Testimonials";
+import NewsVideosCarousel from "@/sections/home/Videos";
 import { LucideAlignEndVertical } from "lucide-react";
 
 const HomePage = () => {
   return (
     <>
     <RealEstateHero />
-    <AboutSection />
-    <PartnersSection />
-    <OurProcess />
+    {/* <AboutSection /> */}
+    {/* <PartnersSection />
+    <ServicesCarousel />
+    <OurProcess /> */}
     <PropertyListings />
-    <TestimonialsSection />
-    <RealEstateRoadmap  />
+    {/* <TestimonialsSection /> */}
     <NewsVideosCarousel />
     </>
   );

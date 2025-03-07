@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import image from "../../icons/blog1.jpg"
 
 interface Property {
   id: number;
@@ -18,28 +19,28 @@ const PropertyListings: React.FC = () => {
       type: 'Luxury Apartment',
       location: 'Paradise, Nevada, U.S.',
       price: 520000,
-      image: '/lovable-uploads/og-image.png'
+      image: image
     },
     {
       id: 2,
       type: 'Luxury Villa',
       location: 'Paradise, Nevada, U.S.',
       price: 420000,
-      image: '/lovable-uploads/og-image.png'
+      image: image
     },
     {
       id: 3,
       type: 'Interior Apartment',
       location: 'Paradise, Nevada, U.S.',
       price: 620000,
-      image: '/lovable-uploads/og-image.png'
+      image: image
     },
     {
       id: 4,
       type: 'Interior',
       location: 'Paradise, Nevada, U.S.',
       price: 320000,
-      image: '/lovable-uploads/og-image.png'
+      image: image
     }
   ];
 
@@ -55,9 +56,14 @@ const PropertyListings: React.FC = () => {
     <div className="relative bg-black text-white min-h-screen flex flex-col justify-center">
       <div className="px-16">
         <div className="flex justify-between items-center mb-12">
+          <div>
           <h1 className="text-6xl font-bold">
-            Get Your Desired <span className="text-yellow-500">Property</span> With Us
+            Get Your Desired 
           </h1>
+          <h1 className="text-6xl font-bold mt-2">
+          Property <span className='bg-gold-gradient bg-clip-text text-transparent'>With Us</span> 
+          </h1>
+          </div>
           <div className="flex space-x-2">
             <button 
               onClick={handlePrevSlide}

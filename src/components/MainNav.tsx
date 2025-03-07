@@ -20,11 +20,12 @@ export const MainNav = () => {
   const menuItems = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
+    { name: "Agents", href: "/agents" },
     {
       name: "Services",
       href: "/services",
       subItems: [
-        { name: "Web Development", href: "/services/web-development" },
+        { name: "Rentals", href: "/services/rentals" },
         { name: "Mobile Development", href: "/services/mobile-development" },
         { name: "UI/UX Design", href: "/services/ui-ux-design" },
         { name: "Cloud Services", href: "/services/cloud-services" },
@@ -36,7 +37,7 @@ export const MainNav = () => {
 
   return (
     <>
-     <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 backdrop-blur-xl bg-neutral-900/80">
+     <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 backdrop-blur-xl bg-neutral-900/60">
         <Logo className="w-24 h-14 object-contain" />
         <button
           onClick={toggleMenu}

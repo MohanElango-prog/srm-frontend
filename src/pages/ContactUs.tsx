@@ -1,9 +1,9 @@
-import ContactForm from "@/components/ContactUs";
+import ContactForm from "@/sections/ContatUs/ContactUs";
 
 const ContactPage = () => {
     return (
       <div>
-        <ContactForm/>
+        <ContactForm />
       </div>
     );
   };
